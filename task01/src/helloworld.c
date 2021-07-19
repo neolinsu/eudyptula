@@ -7,13 +7,13 @@
 
 static int hello_init(void)
 {
-  printk(KERN_DEBUG "Hello World!\n");
+  printk(KERN_DEBUG "Hello World!\n"); // "when loaded prints to the kernel debug log level", which can be checked by `dmesg`.
   return 0;
 }
 
-static void hello_exit(void)
+static void hello_exit(void) // "make the module be able to be unloaded as well."
 {
-  printk(KERN_DEBUG "See you later.\n");
+  printk(KERN_DEBUG "See you later.\n"); // Sign for module_exit which can be checked by `dmesg`.
 }
 
 module_init(hello_init);
