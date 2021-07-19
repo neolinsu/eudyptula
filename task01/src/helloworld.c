@@ -19,6 +19,6 @@ static void hello_exit(void)
 module_init(hello_init);
 module_exit(hello_exit);
 
-MODULE_LICENSE("Proprietary");
+MODULE_LICENSE("GPL");
 MODULE_AUTHOR("ac7a54497a64");
 MODULE_DESCRIPTION("Hello World!");
